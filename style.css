@@ -641,7 +641,7 @@ header {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 40vh;
+        margin-top: 60vh;
     }
 
     .header .txt-header h2 {
