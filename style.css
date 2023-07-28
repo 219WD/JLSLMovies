@@ -1,0 +1,687 @@
+/* Herramientas:
+-------------------------------------------------------------------
+Fuentes:
+font-family: 'Abril Fatface', cursive; <-VARIACION TITULOS GRANDES
+font-family: 'Playfair Display', serif; <-TITULOS GRANDES
+font-family: 'Poppins', sans-serif; <- VARIACIONES DE PARRAFOS
+font-family: 'Roboto', sans-serif; <-PARRAFOS EN GRAL
+-------------------------------------------------------------------
+Botones:
+<button class="button"> <-BOTON PERSONALIZADO
+Si necesitan variaciones en el boton, crean una 2da clase:
+<button class="button header"> <-Ponen el nombre que quieran en header
+Y en CSS ponen: 
+.button.header{
+  width: 100%;
+  heigth: del numero que necesiten;
+}
+-------------------------------------------------------------------
+Carousell: 
+    <section class="miLista"> <-Cambian miLista por lo que necesiten
+    <!-- Slider main container -->
+    <div class="swiper swiper-hero">
+        <h2>Mi Lista</h2> <- Ponen el titulo que necesiten
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="/assets/asesinodelaspostales.jpg" alt="" /> <-Cambian la ruta de las img
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/bettercallsaul.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/billions.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/eldiabloatodashoras.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/losilegales.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/ozark.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/peakyblinders.jpg" alt="" />
+            </div>
+            <div class="swiper-slide">
+                <img src="/assets/vikings.jpg" alt="" />
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+</section>
+
+Y en CSS: 
+
+.miLista{ <-Cambian la clase por la de la section que crearon
+    position: relative;
+}
+.miLista h2{ <-Cambian la clase por la de la section que crearon
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 20px;
+}
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display&family=Poppins:wght@200&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/assets/AAAABeMy__v4vNPyA9A5zk3pUUigUnqKQrn8pz-Vgaw-ecfeCxN573-EZvvCizTAlg1E1yiSt_ikpHS3afXQCFvIZhDbKKwDPi74XjmB.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+.navbar {
+    width: 90%;
+    position: fixed;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu-link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .logo img {
+    width: 80px;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-menu-link {
+    padding: 8px 12px;
+}
+
+.nav-menu-link:hover {
+    color: black;
+    transition: .5s;
+}
+
+.toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+.nav-menu-item .button.nav {
+    display: flex;
+    color: #000000;
+    padding: 5px 30px;
+    margin-top: 20px;
+}
+
+.nav-menu-item .button.nav:hover {
+    color: #ffffff;
+}
+
+.header {
+    width: 90%;
+}
+
+.header .txt-header {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .txt-header h2 {
+    font-size: 70px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+.header .txt-header p {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header .txt-header .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    text-transform: capitalize;
+    text-align: center;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 10px 30px;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+    transition-delay: 0s, 1s;
+}
+
+.button:hover {
+    color: #ffffff;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25px;
+    width: 0;
+    height: 100%;
+    background: #000000;
+    transform: skewX(-35deg);
+    transition: 1s;
+    z-index: -1;
+}
+
+.button:hover:before {
+    width: 150%;
+}
+
+.buttons .button.header {
+    width: 45%;
+}
+
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    background-color: #111111bd;
+    display: none;
+}
+
+.modal {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.wrapper {
+    margin: auto;
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+
+}
+
+.wrapper.active {
+    height: 520px;
+    top: 10px;
+}
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    font-size: 2em;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+.form-box h2 {
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #fff;
+    line-height: 57px;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn-2 {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #000000;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.miLista {
+    position: relative;
+}
+
+.miLista h2 {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.swiper-hero {
+    width: 100%;
+    max-width: 1600px;
+}
+
+.swiper-hero .swiper-slide {
+    width: 341px;
+}
+
+.swiper-hero img {
+    height: 192px;
+    width: 341px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media (min-width: 1024px) {
+    .swiper-hero img {
+        height: 192px;
+    }
+}
+
+.swiper-hero .swiper-button-prev,
+.swiper-hero .swiper-button-next {
+    --swiper-navigation-size: 20px;
+    height: 70px;
+    width: 50px;
+    margin-top: -35px;
+    color: #fff;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.swiper-hero .swiper-button-prev {
+    border-radius: 0 65px 65px 0;
+    left: -10px;
+}
+
+.swiper-hero .swiper-button-next {
+    border-radius: 65px 0 0 65px;
+    right: -10px;
+}
+
+.swiper-hero:hover .swiper-button-prev,
+.swiper-hero:hover .swiper-button-next {
+    opacity: 1;
+}
+
+.swiper-hero .swiper-pagination {
+    --swiper-pagination-color: white;
+    --swiper-pagination-bullet-size: 6px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.25;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 2px;
+}
+
+.swiper-hero .swiper-pagination-bullet {
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+.swiper-hero .swiper-pagination-bullet-active {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+
+
+.populares {
+    position: relative;
+}
+
+.populares h2 {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.accionYCrimen {
+    position: relative;
+}
+
+.accionYCrimen h2 {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.tendencias {
+    position: relative;
+}
+
+.tendencias h2 {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+        position: fixed;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 30px;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-link:hover {
+        background: none;
+        color: black;
+        transition: .5s;
+    }
+
+    .toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+
+
+    .header {
+        width: 90%;
+    }
+
+    .header .txt-header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 40vh;
+    }
+
+    .header .txt-header h2 {
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .header .txt-header p {
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Roboto', sans-serif;
+        text-align: left;
+    }
+
+    .header .txt-header .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .header .txt-header .buttons .button {
+        width: 45%;
+        display: flex;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+        position: fixed;
+        left: 0;
+        top: 100px;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 30px;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-link:hover {
+        background: none;
+        color: black;
+        transition: .5s;
+    }
+
+    .toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-menu_visible {
+        left: 0;
+    }
+}
