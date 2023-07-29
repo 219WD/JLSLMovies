@@ -24,7 +24,7 @@ const admin = {
         location.replace("/index.html");
       }
     } else {
-      alert("El correo o la contraseña es incoreecta!");
+      alert("El correo o la contraseña es incorrecta!");
     }
   };
   

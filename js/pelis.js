@@ -169,11 +169,15 @@ const listarProductos = () => {
       }">
             </div>
       <div class="hover">
+
       <h5 class="card-title">
       <a class="nav-link" href="./pages/producto.html?id=${item.id}">${
       item.title
-    }</a>
+    }      <div class=" puntero">
+      <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
+        </div></a>  
         <p>${item.description}</p>
+        <button class="button peli"><ion-icon name="play-sharp"></ion-icon></button>
       </h5>
       </div>
       </div>
