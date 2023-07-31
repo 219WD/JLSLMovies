@@ -115,6 +115,7 @@ header {
     top: 10px;
     display: flex;
     justify-content: space-between;
+    z-index: 5;
 }
 
 .nav-menu-link {
@@ -577,33 +578,6 @@ header {
     font-size: 20px;
 }
 
-.accionYCrimen {
-    position: relative;
-}
-
-.accionYCrimen h2 {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 20px;
-}
-
-.tendencias {
-    position: relative;
-}
-
-.tendencias h2 {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 20px;
-}
-
-
 @media (max-width: 768px) {
     .nav-menu {
         display: flex;
@@ -614,7 +588,8 @@ header {
         border-radius: 20px;
         backdrop-filter: blur(20px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-        position: fixed;
+        position: absolute;
+        z-index: 5;
         left: 0;
         top: 100px;
         width: 100%;
