@@ -720,3 +720,46 @@ header {
         left: 0;
     }
 }
+
+
+/*CSS LUCI*/
+
+.card2{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    overflow: hidden;
+   
+    }
+
+#foto
+{
+    border-radius: 10px;
+  
+}
+
+#facts{
+    font-family: 'Playfair Display', serif;
+    font-size: larger;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+}
+
+#somos{
+    font-family: 'Playfair Display', serif;
+}
+.card-text{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+ul{
+    list-style-type: none;
+}
+
