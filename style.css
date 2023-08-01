@@ -529,6 +529,7 @@ header {
     position: absolute;
     top: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -536,8 +537,6 @@ header {
 }
 
 .hover h5 a{
-    display: flex;
-    justify-content: center;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
@@ -629,11 +628,10 @@ header {
      height: 45px; */
      line-height: 45px;
      color: white;
-     margin-right: 10px;
+     padding: 5px;
+     margin-right: 5px;
      text-align: center;
      transition: all 300ms ease;
-     
- 
   }
   .piepagina .grupo1 .red-social a ion-icon{
     align-items: center;

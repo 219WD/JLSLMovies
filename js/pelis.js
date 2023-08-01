@@ -173,12 +173,11 @@ const listarProductos = () => {
       <h5 class="card-title">
       <a class="nav-link" href="./pages/producto.html?id=${item.id}">${
       item.title
-    }      <div class=" puntero">
+    }      </h5>      <div class=" puntero">
       <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
         </div></a>  
         <p>${item.description}</p>
-        <button class="button peli"><ion-icon name="play-sharp"></ion-icon></button>
-      </h5>
+        <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
       </div>
       </div>
       `;
@@ -188,9 +187,52 @@ const listarProductos = () => {
     });
   };
   
+  // <a class="nav-link" href="./pages/producto.html?id=${item.id}">${
+  //   item.title
+  // }
+
   if (productos == 0) {
     inicializacion();
   }
   
   listarProductos();
   
+  const listarProductosPopulares = () => {
+    const contenedorPopulares = document.getElementById("populares-slider");
+    // Limpiar
+    contenedorPopulares.innerHTML = "";
+    // Recorrer
+    productos.forEach((item) => {
+        // Creamos los NODOS
+        let columna = document.createElement("div");
+        columna.classList = "swiper-slide-populares";
+
+        // Creamos la tarjeta
+        let tarjeta = `
+        <div class="swiper-slide">
+        <div class="contenedor-populares">
+        <img src="${item.image}" class="card-img-top img-tarjeta" alt="${
+          item.title
+        }">
+              </div>
+        <div class="hover">
+  
+        <h5 class="card-title">
+        <a class="nav-link" href="./pages/producto.html?id=${item.id}">${
+        item.title
+      }      </h5>      <div class=" puntero">
+        <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
+          </div></a>  
+          <p>${item.description}</p>
+          <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
+        </div>
+        </div>
+        `;
+
+        columna.innerHTML = tarjeta;
+        contenedorPopulares.appendChild(columna);
+    });
+    
+  }
+
+  listarProductosPopulares();
