@@ -171,7 +171,7 @@ const listarProductos = () => {
       <div class="hover">
 
       <h5 class="card-title">
-      <a class="nav-link" href="./pages/producto.html?id=${item.id}">${
+      ${
       item.title
     }      </h5>      <div class=" puntero">
       <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    

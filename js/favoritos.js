@@ -1,5 +1,5 @@
 //Contenedor
-let contenedor = document.querySelector("#favoritos");
+let contenedor = document.querySelector("#populares-slider");
 
 //Traemos los datos del localS
 let productos = JSON.parse(localStorage.getItem("productos")) || [];

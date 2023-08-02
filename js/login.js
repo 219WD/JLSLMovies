@@ -1,7 +1,7 @@
 //Perfil de ejemplo
 const admin = {
     correo: "admin@admin.com",
-    password: "123456789facildehackear",
+    password: "JLSLMovies4",
   };
   
   //Funcion logIn
