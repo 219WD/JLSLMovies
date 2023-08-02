@@ -86,7 +86,7 @@ const inicializacion = () => {
           "Billions",
         description:
           "Billions encarna el relato utópico del neoliberalismo donde el mercado es un mecanismo de libertad y justicia y el Estado es un...",
-        category: "serie",
+        category: "series",
         image: "https://occ-0-2100-56.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABWZNa0EMQzd0mtKBvxOY5cUW8z0WmXlRWkRx9-uzuGJmDm6dI6GCk8tZcStj5_NCKep8lmPzW9Cq7M0OdF9La10kBkFfLbwQfUo.webp?r=d69",
   
         favorito: false,
@@ -97,7 +97,7 @@ const inicializacion = () => {
           "Django",
         description:
           "Con la ayuda de Django, Schultz emprende la búsqueda y captura de los delincuentes más buscados del Sur. Según va puliendo sus capacidad como cazado",
-        category: "pelicula",
+        category: "peliculas",
         image: "https://occ-0-2100-56.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRp4488J1Rc2OL01d-pwZYi7qS1HXqTK7Sv78TGuYLoOYCwJoK8USGEyqyDUv7eAHhBzo7fDYrOe9cRDCppfK78kmqfnq_FaMxo.webp?r=0f4",
   
         favorito: false,
@@ -108,7 +108,7 @@ const inicializacion = () => {
           "Petroleo Sangriento",
         description:
           "Un ambicioso buscador de petróleo se hace rico y convierte un simple pueblo en una ciudad en auge, provocando la ira de un carismático joven pastor.",
-        category: "pelicula",
+        category: "peliculas",
         image: "https://occ-0-2100-56.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABf6nlpg19juUHiIjcSvgoqi6MvyEXQRazWv_Q6bMPqdCXUnmoJgmr3zz9k-iAe4jGAiIeMyihuNeEGkwAs7zXRPLvNQLeQ88Tv0.webp?r=317",
   
         favorito: false,
@@ -119,7 +119,7 @@ const inicializacion = () => {
           "Better Call Saul",
         description:
           "Esta precuela de Breaking Bad nominada al Emmy narra la vida del picapleitos Jimmy McGill y su transformación en Saul Goodman, el abogado de moral laxa.",
-        category: "serie",
+        category: "series",
         image: "https://occ-0-2100-56.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABb23UfK2ybvFeaezXTi5G2rR2W9Mhd3PwEwq1THSMLPxBcNm7a90G4v0o8KDSI01Z-q2FsNk4b-NYyUdiAQYxSB2k8xZh8324lo-WkJGiUZXcp9aC1sLrxp6FuUe7tQPQtZk.jpg?r=90f",
   
         favorito: false,
@@ -169,13 +169,13 @@ const listarProductos = () => {
       }">
             </div>
       <div class="hover">
-
+      <div class="titleFav">
       <h5 class="card-title">
       ${
       item.title
-    }      </h5>      <div class=" puntero">
+    }</h5><div class=" puntero">
       <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
-        </div></a>  
+        </div>
         <p>${item.description}</p>
         <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
       </div>

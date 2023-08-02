@@ -18,7 +18,7 @@ const admin = {
     if (correo === admin.correo) {
       if (password === admin.password) {
         //Enviamos al localS
-        localStorage.setItem("user", JSON.stringify(correo));
+        localStorage.setItem("usser", JSON.stringify(correo));
   
         //Ir a adminitracion
         location.replace("/index.html");
@@ -60,7 +60,7 @@ const agregarUsuario = (event) => {
     let id = new Date().getTime();
   
     //4-Capturar los datos de los input
-    let usser = document.querySelector("#username").value;
+    let usser = document.querySelector("#ussername").value;
     let email = document.querySelector("#email").value;
     let password = document.querySelector("#password").value;
     
@@ -75,7 +75,7 @@ const agregarUsuario = (event) => {
     localStorage.setItem("usuarios", JSON.stringify(data));
   
     //7-Limpiar el form
-    document.querySelector("#usser").value = "";
+    document.querySelector("#ussername").value = "";
     document.querySelector("#email").value = "";
     document.querySelector("#password").value = "";
 
