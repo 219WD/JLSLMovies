@@ -1,42 +1,38 @@
 class Usuario {
-  constructor(id, usser, email, password, cargo = false) {
-    this.id = id;
-    this.usser = usser;
-    this.email = email;
+  constructor(username, password, email, cargo = false) {
+    this.username = username;
     this.password = password;
-    this.cargo = cargo; // No es necesario usar `cargo = false` aquí, ya que si no se proporciona, su valor por defecto será `false`.
+    this.email = email;
   }
 }
 
-//RECIBIR DESDE LOCALSTORAGE
-const data = JSON.parse(localStorage.getItem("usuarios")) || [];
+// Escuchar el evento submit del formulario de registro
+document.getElementById('registerForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const newUsername = document.getElementById('ussername').value;
+  const newPassword = document.getElementById('password').value;
+  const newEmail = document.getElementById('email').value;
 
-//Register
+  // Obtener los usuarios registrados desde LocalStorage
+  const users = JSON.parse(localStorage.getItem('users')) || [];
 
-//Funcion para agregar usuario nuevo
-const agregarUsuario = (event) => {
-  //1-Detener el submit
-  event.preventDefault();
+  // Verificar si el usuario ya existe
+  if (users.some(u => u.username === newUsername)) {
+    alert('Este usuario ya existe. Intenta con otro nombre de usuario.');
+    return;
+  }
 
-  //3-Crear id (sin usuarios preexistentes)
-  let id = new Date().getTime();
+  // Crear una instancia de Usuario con los datos del nuevo usuario
+  const newUser = new Usuario(newUsername, newPassword, newEmail);
 
-  //4-Capturar los datos de los inputs
-  let usser = document.querySelector("#ussername").value;
-  let email = document.querySelector("#email").value;
-  let password = document.querySelector("#password").value;
+  // Agregar el nuevo usuario a la lista
+  users.push(newUser);
 
-  //5-Crear la clase usuario
-  let usuario = new Usuario(id, usser, email, password);
+  // Guardar la lista actualizada en LocalStorage
+  localStorage.setItem('users', JSON.stringify(users));
+  alert('Registro exitoso. ¡Ahora puedes iniciar sesión con tu nueva cuenta!');
 
-  //6-Agregar al arreglo el nuevo usuario
-  data.push(usuario);
-
-  //Agregar al localStorage
-  localStorage.setItem("usuarios", JSON.stringify(data));
-
-  //7-Limpiar el formulario
-  document.querySelector("#ussername").value = "";
-  document.querySelector("#email").value = "";
-  document.querySelector("#password").value = "";
-};
+document.getElementById('ussername').value = "";
+document.getElementById('password').value = "";
+document.getElementById('email').value = "";
+});

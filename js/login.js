@@ -1,41 +1,20 @@
- //Perfil de ejemplo
-  const admin = {
-    correo: "admin@admin.com",
-    password: "JLSLMovies4",
-    cargo: true,
-  };
-  
-  //Funcion logIn
-  
-  const logIn = (event) => {
-    event.preventDefault();
-  
-    //Obtengo los valores
-    let correo = document.querySelector("#emailLog").value;
-    let password = document.querySelector("#passwordLog").value;
-  
-    //Validar los valores
-    //   if(correo===admin.correo && password===admin.password)
-    if (correo === usuario.correo) {
-      if (password === usuario.password) {
-        //Enviamos al localS
-        localStorage.setItem("usser", JSON.stringify(correo));
-        location.replace("/index.html")
-        
-        // if(cargo){
-        // //Ir a adminitracion
-        // location.replace("/admin.html");
-        // }
 
-      }
-    } else {
-      alert("El correo o la contraseña es incorrecta!");
-    }
-  };
-  
-  //Escuchadores de eventos
-  document.getElementById("formLogIn").addEventListener("submit", logIn);
-  
+// Escuchar el evento submit del formulario de inicio de sesión
+document.getElementById('formLogIn').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('emailLog').value;
+  const password = document.getElementById('passwordLog').value;
 
+  // Obtener los usuarios registrados desde LocalStorage
+  const users = JSON.parse(localStorage.getItem('users')) || [];
 
-//-------------------------------------------------------------------------------------------
+  // Buscar el usuario en la lista
+  const user = users.find(u => u.username === username && u.password === password);
+
+  if (user) {
+    alert('¡Inicio de sesión exitoso!');
+    location.replace("/index.html")
+  } else {
+    alert('Usuario o contraseña incorrectos. Intenta nuevamente.');
+  }
+});

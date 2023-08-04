@@ -1,34 +1,14 @@
-class Producto {
-    constructor(
-      id,
-      title,
-      description,
-      category,
-      price,
-      image,
-      favorito = false
-    ) {
-      this.id = id;
-      this.title = title;
-      this.description = description;
-      this.category = category;
-      this.price = price;
-      this.image = image;
-      this.favorito = favorito;
-    }
-  }
-  
   //BOTON LOGIN
   
   let btnLogin = document.querySelector("#btn-login");
 
   // Obtenemos el usuario del localStorage
-  let usuario = JSON.parse(localStorage.getItem("usser")) || null;
+  const users = JSON.parse(localStorage.getItem('users')) || [];
   
   // Cambiar configuración del botón
   if (btnLogin) {
-    if (usuario) {
-      btnLogin.innerText = "Cerrar sesión"; // Cambié "usuario" a "Cerrar sesión" ya que se refiere a cerrar sesión.
+    if (users) {
+      btnLogin.innerText = "Cerrar sesión"; 
     } else {
       btnLogin.innerText = "Inicio de sesión";
     }
@@ -37,9 +17,9 @@ class Producto {
   
   // Función de inicio y cierre de sesión
   function sesion() {
-    if (usuario) {
+    if (users) {
       // Si está logueado, cerramos sesión
-      localStorage.removeItem("usser");
+      localStorage.removeItem("username");
       location.replace("/index.html");
     } else {
       // Si no está logueado, redirigimos al inicio de sesión

@@ -1,5 +1,5 @@
 //Contenedor
-let contenedor = document.querySelector("#populares-slider");
+let contenedor = document.querySelector("#favoritos");
 
 //Traemos los datos del localS
 let productos = JSON.parse(localStorage.getItem("productos")) || [];
@@ -21,24 +21,21 @@ const listarProductos = () => {
       let columna = document.createElement("div");
       columna.classList = "col";
       let tarjeta = `
-      <div class="swiper-slide">
+      <div class="col">
       <div class="contenedor-img">
       <img src="${item.image}" class="card-img-top img-tarjeta" alt="${
         item.title
       }">
             </div>
-      <div class="hover">
-
       <h5 class="card-title">
       <a class="nav-link" href="./pages/producto.html?id=${item.id}">${
       item.title
     }      <div class=" puntero">
-      <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
+      <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}"aria-hidden="true" onclick="marcarFavorito(${item.id})"></ion-icon>    
         </div></a>  
         <p>${item.description}</p>
         <button class="button peli"><ion-icon name="play-sharp"></ion-icon></button>
       </h5>
-      </div>
       </div>
       `;
 
