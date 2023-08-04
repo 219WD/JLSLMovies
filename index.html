@@ -2,220 +2,151 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JLSL Movies || Series y Peliculas online</title>
-    <link rel="icon" href="/assets/logo-g.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JLSL Movies || Series y Peliculas online</title>
+  <link rel="icon" href="/assets/logo-g.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <body>
-    <header>
+  <header>
 
-        <nav class="navbar">
-            <div class="logo"><a href="#"><img src="/assets/logo-n.png" alt=""></a></div>
-            <button class="toggle"><ion-icon name="menu"></ion-icon></button>
-                <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link">inicio</a></li>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link">series</a></li>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link">peliculas</a></li>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link">About Us</a></li>
-                    <li class="nav-menu-item"><a href="#" class="nav-menu-link">contact</a></li>
-                    <li class="nav-menu-item"><button class="button nav" id="buttonNav" onclick=""><ion-icon
-                        name="person-sharp"></ion-icon>usuario</button></li>
-                </ul>
-        </nav>
+    <nav class="navbar">
+      <div class="logo"><a href="#"><img src="/assets/logo-n.png" alt=""></a></div>
+      <button class="toggle"><ion-icon name="menu"></ion-icon></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-menu-item"><a href="#" class="nav-menu-link">inicio</a></li>
+        <li class="nav-menu-item"><a href="#" class="nav-menu-link">series</a></li>
+        <li class="nav-menu-item"><a href="#" class="nav-menu-link">peliculas</a></li>
+        <li class="nav-menu-item"><a href="#" class="nav-menu-link">About Us</a></li>
+        <li class="nav-menu-item"><a href="#" class="nav-menu-link">contact</a></li>
+        <li><button class="button nav" id="btn-login">Inicio de sesión</button></li>
 
-        <div class="header">
-            <div class="txt-header">
-                <h2>Bloodline</h2>
-                <p>Bloodline es una serie de televisión de suspense drama original de Netflix creada por Todd A.
-                    Kessler, Glenn Kessler, y Daniel Zelman, y producida por Sony Pictures Television. La primera
-                    temporada de la serie, la cual consta de 13 episodios, fue estrenada en Netflix el 20 de marzo de
-                    2015.</p>
-                <div class="buttons">
-                    <button class="button header"><ion-icon name="play-sharp"></ion-icon>reproducir</button>
-                    <button class="button header"><ion-icon
-                            name="information-circle-sharp"></ion-icon>informacion</button>
-                </div>
-            </div>
+      </ul>
+    </nav>
+
+    <div class="header">
+      <div class="txt-header">
+        <h2>Bloodline</h2>
+        <p>Bloodline es una serie de televisión de suspense drama original de Netflix creada por Todd A.
+          Kessler, Glenn Kessler, y Daniel Zelman, y producida por Sony Pictures Television. La primera
+          temporada de la serie, la cual consta de 13 episodios, fue estrenada en Netflix el 20 de marzo de
+          2015.</p>
+        <div class="buttons">
+          <button class="button header"><ion-icon name="play-sharp"></ion-icon>reproducir</button>
+          <button class="button header"><ion-icon name="information-circle-sharp"></ion-icon>informacion</button>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <article class="modal-container">
-        <div class="modal">
-            <div class="modal-body">
-                <div class="wrapper active-popup">
-                    <span class="icon-close"><ion-icon name="close"></ion-icon></span>
-                    <div class="form-box login">
-                        <h2>Iniciar Sesion</h2>
-                        <form id="formLogIn">
-                            <div class="input-box">
-                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                                <input type="email" id="emailLog" required>
-                                <label>Email</label>
-                            </div>
-            
-                            <div class="input-box">
-                                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                                <input type="password" id="passwordLog" required minlength="8">
-                                <label>Contraseña</label>
-                            </div>
-                            <div class="remember-forgot">
-                                <label><input type="checkbox">
-                                    Recordar</label>
-                                <a href="#">Olvidaste la Contraseña?</a>
-                            </div>
-                            <button class="btn-2" id="btn-login">Iniciar Sesion</button>
-                            <div class="login-register">
-                                <p>No tiene una cuenta?<a href="#" class="register-link"> Registrarse</a></p>
-                            </div>
-            
-                        </form>
-                    </div>
-            
-                    <div class="form-box register">
-                        <h2>Registro</h2>
-                        <form onsubmit="agregarUsuario(event)">
-                            <div class="input-box">
-                                <span class="icon"><ion-icon name="person"></ion-icon></span>
-                                <input type="text" required id="username">
-                                <label>Usuario</label>
-                            </div>
-            
-                            <div class="input-box">
-                                <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                                <input type="email" required id="email">
-                                <label>Email</label>
-                            </div>
-            
-                            <div class="input-box">
-                                <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
-                                <input type="password" required id="password">
-                                <label>Contraseña</label>
-                            </div>
-                            <div class="remember-forgot">
-                                <label><input type="checkbox">
-                                    acepto los terminos y condiciones</label>
-                                <a href="#"></a>
-                            </div>
-                            <button type="submit" class="btn-2">Registrar</button>
-                            <div class="login-register">
-                                <p>Ya tienes una cuenta?<a href="#" class="login-link"> Iniciar Sesion</a></p>
-                            </div>
-            
-                        </form>
-                    </div>
-                </div>
-            
-            </div>
+  <article class="miLista">
+    <!-- Slider main container -->
+    <div class="swiper swiper-hero">
+      <h2>Mi Lista</h2>
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide" id="swiper-slide">
+          <!-- <img src="/assets/hombreEnLlamas.jpg" alt="" /> -->
+          <div class="hover"></div>
         </div>
-    </article>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
 
-    <article class="miLista">
-        <!-- Slider main container -->
-        <div class="swiper swiper-hero">
-            <h2>Mi Lista</h2>
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide" id="swiper-slide">
-                    <!-- <img src="/assets/hombreEnLlamas.jpg" alt="" /> -->
-                    <div class="hover"></div>
-                </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+      <!-- If we need scrollbar -->
+      <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+  </article>
 
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
+  <section class="populares">
+    <!-- Slider main container -->
+    <div class="swiper swiper-hero">
+      <h2>Populares</h2>
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper" id="populares-slider">
+        <!-- Slides -->
+        <div class="swiper-slide" id="favoritos">
+          
+          <div class="hover"></div>
         </div>
-    </article>
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev popularesButton"></div>
+      <div class="swiper-button-next popularesButton"></div>
+    </div>
+  </section>
 
-    <section class="populares">
-        <!-- Slider main container -->
-        <div class="swiper swiper-populares">
-            <h2>Populares</h2>
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper" id="populares-slider">
-                <!-- Slides -->
-                <!-- <div class="swiper-slide" id="favoritos"> -->
-                    <!-- <img src="/assets/hombreEnLlamas.jpg" alt="" /> -->
-                    <!-- <div class="hover"></div> -->
-                <!-- </div> -->
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
-            <!-- <div class="swiper-scrollbar"></div> -->
+  <section class="accion">
+    <!-- Slider main container -->
+    <div class="swiper swiper-hero">
+      <h2>Accion</h2>
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper" id="accion-slider">
+        <!-- Slides -->
+        <div class="swiper-slide" id="favoritos">
+          
+          <div class="hover"></div>
         </div>
-    </section>
-    
-    
-    <footer class="piepagina">
-        <div class="grupo1">
-          <div class="box">
-            <figure>
-              <a href="#"><img src="/assets/logo-n.png" alt=""></a>
-            </figure>
-          </div>
-          <div class="box">
-            <h2>SOBRE NOSOTROS</h2>
-            <div class="botones">
-              <ul>
-                <li><a href="/proyecto 1/page/principal.html">PAG PRINCIPAL</a></li>
-                <li><a href="/proyecto 1/page/formulario.html">CONTACTO COMERCIAL</a></li>
-              </ul>
-              <ul>
-                <li><a href="/proyecto 1/page/error404.html">ACERCA DE JLSLMovies</a></li>
-                <li><a href="/proyecto 1/page/error404.html">TERMINOS Y CONDICIONES</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="box">
-            <h2>SIGUENOS</h2>
-            <div class="red-social">
-              <a href="https://www.facebook.com"
-                ><span class="fb"><ion-icon name="logo-facebook"></ion-icon></span
-              ></a>
-              <a href="https://www.instagram.com"
-                ><span class="in"><ion-icon name="logo-instagram"></ion-icon></span
-              ></a>
-              <a href="https://www.twitter.com"
-                ><span class="tw"><ion-icon name="logo-twitter"></ion-icon></span
-              ></a>
-              <a href="https://www.youtube.com"
-                ><span class="yt"><ion-icon name="logo-youtube"></ion-icon></span
-              ></a>
-              <a href="https://www.linkedin.com"
-                ><span class="li"><ion-icon name="logo-linkedin"></ion-icon></span
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="grupo2">
-          <small>&copy; 2023 <b>JLSLMovies</b> - Todos los Derechos Reservados</small>
-        </div>
-      </footer>
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev popularesButton"></div>
+      <div class="swiper-button-next popularesButton"></div>
+    </div>
+  </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="/js/modal.js"></script>
-    <script src="/js/pelis.js"></script>
-    <script src="/js/favoritos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="/js/index.js"></script>
+  <footer class="piepagina">
+    <div class="grupo1">
+      <div class="box">
+        <figure>
+          <a href="#"><img src="/assets/logo-n.png" alt=""></a>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>SOBRE NOSOTROS</h2>
+        <div class="botones">
+          <ul>
+            <li><a href="/proyecto 1/page/principal.html">PAG PRINCIPAL</a></li>
+            <li><a href="/proyecto 1/page/formulario.html">CONTACTO COMERCIAL</a></li>
+          </ul>
+          <ul>
+            <li><a href="/proyecto 1/page/error404.html">ACERCA DE JLSLMovies</a></li>
+            <li><a href="/proyecto 1/page/error404.html">TERMINOS Y CONDICIONES</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="box">
+        <h2>SIGUENOS</h2>
+        <div class="red-social">
+          <a href="https://www.facebook.com"><span class="fb"><ion-icon name="logo-facebook"></ion-icon></span></a>
+          <a href="https://www.instagram.com"><span class="in"><ion-icon name="logo-instagram"></ion-icon></span></a>
+          <a href="https://www.twitter.com"><span class="tw"><ion-icon name="logo-twitter"></ion-icon></span></a>
+          <a href="https://www.youtube.com"><span class="yt"><ion-icon name="logo-youtube"></ion-icon></span></a>
+          <a href="https://www.linkedin.com"><span class="li"><ion-icon name="logo-linkedin"></ion-icon></span></a>
+        </div>
+      </div>
+    </div>
+    <div class="grupo2">
+      <small>&copy; 2023 <b>JLSLMovies</b> - Todos los Derechos Reservados</small>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="/js/pelis.js"></script>
+  <script src="/js/global.js"></script>
+  <script src="/js/modal.js"></script>
+  <script src="/js/favoritos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="/js/index.js"></script>
 </body>
 
 </html>

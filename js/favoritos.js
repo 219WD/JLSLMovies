@@ -71,3 +71,21 @@ listarProductos();
       </div>
 
 */
+
+  //Funcion marcarFavorito
+  
+  const marcarFavorito = (id) => {
+    //Obtenemos el index
+    let index = productos.findIndex((item) => {
+      return item.id == id;
+    });
+  
+    //Cambiar el estado
+    productos[index].favorito = !productos[index].favorito;
+  
+    //Actualizo localS
+    localStorage.setItem("productos", JSON.stringify(productos));
+    //Listar los productos
+    listarProductos();
+  };
+  

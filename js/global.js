@@ -20,49 +20,29 @@ class Producto {
   
   //BOTON LOGIN
   
-  //Capturar el boton
   let btnLogin = document.querySelector("#btn-login");
+
+  // Obtenemos el usuario del localStorage
+  let usuario = JSON.parse(localStorage.getItem("usser")) || null;
   
-  //Obtenemos el usuario
-  const data = JSON.parse(localStorage.getItem("usuarios")) || [];
-  
-  //Cambiar configuracion del boton
+  // Cambiar configuración del botón
   if (btnLogin) {
     if (usuario) {
-      btnLogin.innerText = usuario;
+      btnLogin.innerText = "Cerrar sesión"; // Cambié "usuario" a "Cerrar sesión" ya que se refiere a cerrar sesión.
     } else {
       btnLogin.innerText = "Inicio de sesión";
     }
-    document.querySelector("#btn-login").addEventListener("click", sesion);
+    btnLogin.addEventListener("click", sesion);
   }
   
-  //Funcion de inicio de sesion
+  // Función de inicio y cierre de sesión
   function sesion() {
     if (usuario) {
-      //Si esta logueado
+      // Si está logueado, cerramos sesión
       localStorage.removeItem("usser");
-      btnLogin.innerText = "Inicio de sesión";
-      location.replace("http://localhost:5500/index.html");
+      location.replace("/index.html");
     } else {
-      //No esta logueado
-      location.replace("http://127.0.0.1:5502/pages/crud/pages/login.html");
+      // Si no está logueado, redirigimos al inicio de sesión
+      location.replace("/pages/premain.html");
     }
   }
-  
-  //Funcion marcarFavorito
-  
-  const marcarFavorito = (id) => {
-    //Obtenemos el index
-    let index = productos.findIndex((item) => {
-      return item.id == id;
-    });
-  
-    //Cambiar el estado
-    productos[index].favorito = !productos[index].favorito;
-  
-    //Actualizo localS
-    localStorage.setItem("productos", JSON.stringify(productos));
-    //Listar los productos
-    listarProductos();
-  };
-  

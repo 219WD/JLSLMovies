@@ -1,7 +1,8 @@
-//Perfil de ejemplo
-const admin = {
+ //Perfil de ejemplo
+  const admin = {
     correo: "admin@admin.com",
     password: "JLSLMovies4",
+    cargo: true,
   };
   
   //Funcion logIn
@@ -15,13 +16,17 @@ const admin = {
   
     //Validar los valores
     //   if(correo===admin.correo && password===admin.password)
-    if (correo === admin.correo) {
-      if (password === admin.password) {
+    if (correo === usuario.correo) {
+      if (password === usuario.password) {
         //Enviamos al localS
         localStorage.setItem("usser", JSON.stringify(correo));
-  
-        //Ir a adminitracion
-        location.replace("/index.html");
+        location.replace("/index.html")
+        
+        // if(cargo){
+        // //Ir a adminitracion
+        // location.replace("/admin.html");
+        // }
+
       }
     } else {
       alert("El correo o la contraseña es incorrecta!");
@@ -34,51 +39,3 @@ const admin = {
 
 
 //-------------------------------------------------------------------------------------------
-//Register
-
-class Usuario {
-    constructor(id, usser, email, password) {
-        this.id = id;
-        this.usser = usser;
-      this.email = email;
-      this.password = password;
-    }
-  }
-
-  //RECIBIR DESDE LOCALSTORAGE
-  const data = JSON.parse(localStorage.getItem("usuarios")) || [];
-
-  
-//Funcion para agregar usuario nuevo
-
-const agregarUsuario = (event) => {
-    //1-Detener el submit
-    event.preventDefault();
-
-  
-    //3-crear id (sin usuarios preexistentes)
-    let id = new Date().getTime();
-  
-    //4-Capturar los datos de los input
-    let usser = document.querySelector("#ussername").value;
-    let email = document.querySelector("#email").value;
-    let password = document.querySelector("#password").value;
-    
-  
-    //5-Crear la clase usuario
-    let usuario = new Usuario(id, usser, email, password);
-  
-    //6-Agregar al arreglo el nuevo usuario
-    data.push(usuario);
-  
-    //!Agregar al localStorage
-    localStorage.setItem("usuarios", JSON.stringify(data));
-  
-    //7-Limpiar el form
-    document.querySelector("#ussername").value = "";
-    document.querySelector("#email").value = "";
-    document.querySelector("#password").value = "";
-
-  
-  };
-  
