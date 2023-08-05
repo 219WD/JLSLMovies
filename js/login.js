@@ -14,7 +14,5 @@ document.getElementById('formLogIn').addEventListener('submit', function (e) {
   if (user) {
     alert('¡Inicio de sesión exitoso!');
     location.replace("/index.html")
-  } else {
-    alert('Usuario o contraseña incorrectos. Intenta nuevamente.');
   }
 });
