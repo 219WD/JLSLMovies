@@ -98,7 +98,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/AAAABeMy__v4vNPyA9A5zk3pUUigUnqKQrn8pz-Vgaw-ecfeCxN573-EZvvCizTAlg1E1yiSt_ikpHS3afXQCFvIZhDbKKwDPi74XjmB.jpg);
+    background: linear-gradient(180deg, transparent 90%, rgba(0,0,0,1) 100%), url(/assets/AAAABeMy__v4vNPyA9A5zk3pUUigUnqKQrn8pz-Vgaw-ecfeCxN573-EZvvCizTAlg1E1yiSt_ikpHS3afXQCFvIZhDbKKwDPi74XjmB.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -115,6 +115,7 @@ header {
     top: 10px;
     display: flex;
     justify-content: space-between;
+    z-index: 5;
 }
 
 .nav-menu-link {
@@ -167,7 +168,8 @@ header {
 
 
 
-.nav-menu-item .button.nav {
+.button.nav {
+    font-size: 15px;
     display: flex;
     color: #000000;
     padding: 5px 30px;
@@ -254,7 +256,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 5;
     display: flex;
     background-color: #111111bd;
     display: none;
@@ -528,16 +530,14 @@ header {
     position: absolute;
     top: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transition: .8s all;
 }
-
-.hover h5 a{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
+.hover .card-title{
+    text-align: center;
     color: #fff;
     font-size: 18px;
 }
@@ -556,6 +556,9 @@ header {
 .hover .button.peli{
     width: 100%;
     height: 40px;
+}
+.hover .button.peli{
+    background-color: #fff;
 }
 
 .swiper-slide:hover .hover{
@@ -577,11 +580,11 @@ header {
     font-size: 20px;
 }
 
-.accionYCrimen {
+.accion {
     position: relative;
 }
 
-.accionYCrimen h2 {
+.accion h2 {
     position: absolute;
     top: 5px;
     left: 10px;
@@ -590,18 +593,150 @@ header {
     font-size: 20px;
 }
 
-.tendencias {
-    position: relative;
-}
-
-.tendencias h2 {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    z-index: 2;
-    color: #ffffff;
+/* Footer */
+.piepagina{
+    /* justify-content: space-between; */
+    padding: 10px;
+     width: 100%;
+     background-color: #333333;
+     position: absolute;
+     /* bottom: 0; */
+ 
+ 
+  }
+  .piepagina .grupo1{
+     width: 100%;
+     max-width: 1200px;
+     margin: auto;
+     display: grid;
+     justify-content: space-between;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 50px;
+     padding: 45px 0px;
+ 
+  }
+  .piepagina .grupo1 .box figure{
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  .piepagina .grupo1 .box figure img{
+     width: 150px;
+  }
+  .piepagina .grupo1 .box h2{
+     color: white;
+     margin-bottom: 25px;
+     font-size: 20px;
+  }
+  .piepagina .grupo1 .box a{
+     color:   white;
+     /* margin-bottom: 10px; */
+ 
+  }
+ 
+  .piepagina .grupo1 .red-social a{
+     display: inline-block;
+     text-decoration: none;
+     /* width: 45px;
+     height: 45px; */
+     line-height: 45px;
+     color: white;
+     padding: 5px;
+     margin-right: 5px;
+     text-align: center;
+     transition: all 300ms ease;
+  }
+  .piepagina .grupo1 .red-social a ion-icon{
+    align-items: center;
     font-size: 20px;
-}
+    text-align: center;
+  }
+  .piepagina .grupo1 .red-social a:hover{
+     color: aqua;
+  }
+ .box h2{
+    text-align: center;
+ }
+  .box .botones ul{
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .box .botones ul li a{
+    text-decoration: none;
+  }
+  .box .botones ul li a:hover{
+    text-decoration: underline;
+
+    
+  }
+  .piepagina .grupo2{
+     background-color: black;
+     padding: 15px 10px;
+     text-align: center;
+     color: white;
+  }
+ 
+  .piepagina .grupo2 small{
+     font-size: 15px;
+  }
+ 
+  .fb{
+    background: blue;
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+ }
+ 
+ .tw{
+    background: rgb(0, 140, 255);
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+ }
+ 
+ .in{
+    background: rgb(250, 0, 179);
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+ }
+ 
+ .li{
+    background: rgb(0, 102, 255);
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+ }
+ 
+ .yt{
+    background: red;
+    padding: 8px;
+    border-radius: 50px;
+    color: white;
+ }
+ 
+ 
+  @media screen and (max-width:800px){
+     .piepagina .grupo1{
+         width: 90%;
+         grid-template-columns: repeat(1, 1fr);
+         grid-gap: 30px;
+         padding: 35px 0px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+  }
+
+
+/* Fin del footer */
+
 
 
 @media (max-width: 768px) {
@@ -614,7 +749,8 @@ header {
         border-radius: 20px;
         backdrop-filter: blur(20px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-        position: fixed;
+        position: absolute;
+        z-index: 5;
         left: 0;
         top: 100px;
         width: 100%;
@@ -639,8 +775,6 @@ header {
 
     .nav-menu_visible {
         left: 0;
-        
-        z-index: 100;
     }
 
 
@@ -652,7 +786,7 @@ header {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 60vh;
+        margin-top: 50vh;
     }
 
     .header .txt-header h2 {
@@ -679,6 +813,12 @@ header {
     .header .txt-header .buttons .button {
         width: 45%;
         display: flex;
+        font-size: 16px;
+        justify-content: center;
+    }
+
+    .header .txt-header .buttons .button ion-icon{
+        display: none;
     }
 }
 
@@ -720,3 +860,46 @@ header {
         left: 0;
     }
 }
+
+
+/*CSS LUCI*/
+
+.card2{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    overflow: hidden;
+   
+    }
+
+#foto
+{
+    border-radius: 10px;
+  
+}
+
+#facts{
+    font-family: 'Playfair Display', serif;
+    font-size: larger;
+}
+
+h1{
+    font-family: 'Playfair Display', serif;
+}
+
+#somos{
+    font-family: 'Playfair Display', serif;
+}
+.card-text{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+ul{
+    list-style-type: none;
+}
+
