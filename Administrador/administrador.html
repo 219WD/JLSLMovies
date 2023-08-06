@@ -74,7 +74,7 @@
           <form onsubmit="">
             <div class="row mb-2">
               <div class="col">
-                <label>Título</label>
+                <label>Nombre de Pelicula/Serie</label>
                 <input
                   type="text"
                   class="form-control"
@@ -97,14 +97,14 @@
             </div>
             <div class="row mb-2">
               <div class="col">
-                <label>Genero</label>
+                <label>Categoría</label>
                 <select
                   class="form-select"
                   aria-label="Default select example"
                   required
                   id="categoria"
                 >
-                  <option selected>Seleccione un Genero</option>
+                  <option selected>Seleccione una categoria</option>
                   <option value="electronics">electronics</option>
                   <option value="Periféricos">Periféricos</option>
                   <option value="Accesorios">Accesorios</option>
@@ -113,7 +113,7 @@
                 </select>
               </div>
               <div class="col">
-                <label>Precio</label>
+                <label>Publicado</label>
                 <input
                   type="number"
                   class="form-control"
@@ -153,10 +153,10 @@
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Título</th>
+                <th scope="col">Nombre de Pelicula/Serie</th>
                 <th scope="col">Descripcion</th>
-                <th scope="col">Genero</th>
-                <th scope="col">Precio</th>
+                <th scope="col">Categoría</th>
+                <th scope="col">Publicado</th>
                 <th></th>
               </tr>
             </thead>
@@ -199,7 +199,7 @@
             <form onsubmit="actualizarProducto(event)">
               <div class="row mb-2">
                 <div class="col">
-                  <label>Título</label>
+                  <label>Nombre de Pelicula/Serie</label>
                   <input
                     type="text"
                     class="form-control"
@@ -229,7 +229,6 @@
                   >
                     <option selected>Seleccione una categoría</option>
                     <option value="electronics">electronics</option>
-
                     <option value="Periféricos">Periféricos</option>
                     <option value="Accesorios">Accesorios</option>
                     <option value="Storage">Storage</option>
@@ -237,7 +236,7 @@
                   </select>
                 </div>
                 <div class="col">
-                  <label>Precio</label>
+                  <label>Publicado</label>
                   <input
                     type="number"
                     class="form-control"
@@ -251,7 +250,7 @@
               </div>
               <div class="row mb-2">
                 <div class="col">
-                  <label>Imagen de producto</label>
+                  <label>Portada de Pelicula/Serie</label>
                   <input
                     type="text"
                     class="form-control"

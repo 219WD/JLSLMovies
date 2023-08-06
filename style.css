@@ -175,7 +175,12 @@ header {
     padding: 5px 30px;
     margin-top: 20px;
 }
-
+#administrar{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-left: 5px;
+}
 .nav-menu-item .button.nav:hover {
     color: #ffffff;
 }
