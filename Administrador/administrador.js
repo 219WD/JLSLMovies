@@ -29,6 +29,10 @@ class Producto {
 
     let productos = JSON.parse(localStorage.getItem("productos")) || [];
 
+
+    let indexUpdate = null;
+
+
     const cargarTabla = () => {
         cuerpoTabla.innerHTML = "";
         productos.forEach((producto) => {
@@ -71,8 +75,36 @@ class Producto {
 
     const abrirModal = (id) => {
      console.log(id);
+
+     indexUpdate=productos.findIndex((item) =>{
+        return item.id = id;
+      });
+      console.log(indexUpdate);
+  
+      document.querySelector("#tituloModal").value= productos[indexUpdate].title;
+  
+      document.querySelector("#descripcionModal").value= productos[indexUpdate].description;                                      
+  
+      document.querySelector("#categoriaModal").value= productos[indexUpdate].category;
+  
+      document.querySelector("#precioModal").value= productos[indexUpdate].price;
+  
+      document.querySelector("#imagenModal").value= productos[indexUpdate].image;
+  
+
+
      myModal.show();
     };
+
+    const actualizarProducto = (event) => {
+        event.preventDefault();
+
+
+
+        
+    };
+    
+      
   
     
 
