@@ -176,6 +176,9 @@ header {
     margin-top: 20px;
 }
 #administrar{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
     margin-left: 5px;
 }
 .nav-menu-item .button.nav:hover {
