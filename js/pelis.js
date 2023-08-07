@@ -6,7 +6,7 @@ class Producto {
     category,
     price,
     image,
-    favorito = false
+    favorito = false,
   ) {
     this.id = id;
     this.title = title;
@@ -133,157 +133,8 @@ const inicializacion = () => {
   
         favorito: false,
       },
-    ];
-
-    data.forEach((item) => {
-        let prod = new Producto(
-          item.id,
-          item.title,
-          item.description,
-          item.category,
-          item.price,
-          item.image
-        );
-    
-        productos.push(prod);
-      });
-      localStorage.setItem("productos", JSON.stringify(productos));
-    };
-
-    //-------------------------------------------------------------------------------
-
-    let contenedor = document.querySelector(".swiper-wrapper");
-
-    //-------------------------------------------------------------------------------
-
-const listarProductos = () => {
-    //limpiar
-    contenedor.innerHTML = "";
-    //Recorrer
-    productos.forEach((item) => {
-      //Creamos los NODOS
-      let columna = document.createElement("div");
-      columna.classList = "swiper-slide";
-      //Creamos la tarjeta
-      let tarjeta = `
-      <div class="swiper-slide">
-      <div class="contenedor-img">
-      <img src="${item.image}" class="card-img-top img-tarjeta" alt="${
-        item.title
-      }">
-            </div>
-      <div class="hover">
-      <div class="titleFav">
-      <h5 class="card-title">
-      ${
-      item.title
-    }</h5><div class=" puntero">
-      <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
-        </div>
-        <p>${item.description}</p>
-        <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
-      </div>
-      </div>
-      `;
-  
-      columna.innerHTML = tarjeta;
-      contenedor.appendChild(columna);
-    });
-  };
-  
-  if (productos == 0) {
-    inicializacion();
-  }
-  
-  listarProductos();
-  
-  const listarProductosPopulares = () => {
-    const contenedorPopulares = document.getElementById("populares-slider");
-    // Limpiar
-    contenedorPopulares.innerHTML = "";
-    // Recorrer
-    productos.forEach((item) => {
-        // Creamos los NODOS
-        let columna = document.createElement("div");
-        columna.classList = "swiper-wrapper";
-
-        // Creamos la tarjeta
-        let tarjeta = `
-        <div class="swiper-slide">
-        <img src="${item.image}" class="card-img-top img-tarjeta" alt="${
-          item.title
-        }">
-        <div class="hover">
-      <div class="titleFav">
-      <h5 class="card-title">
-      ${
-      item.title
-    }</h5><div class=" puntero">
-      <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
-        </div>
-        <p>${item.description}</p>
-        <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
-      </div>
-      </div>
-        `;
-
-        columna.innerHTML = tarjeta;
-        contenedorPopulares.appendChild(columna);
-    });
-    
-  }
-
-  listarProductosPopulares();
-
-  const listarAccion = () => {
-    const contenedorPopulares = document.getElementById("accion-slider");
-    // Limpiar
-    contenedorPopulares.innerHTML = "";
-    // Recorrer
-    productos.forEach((item) => {
-        // Creamos los NODOS
-        let columna = document.createElement("div");
-        columna.classList = "swiper-wrapper";
-
-        // Creamos la tarjeta
-        let tarjeta = `
-        <div class="swiper-slide">
-        <img src="${item.image}" class="card-img-top img-tarjeta" alt="${
-          item.title
-        }">
-        <div class="hover">
-      <div class="titleFav">
-      <h5 class="card-title">
-      ${
-      item.title
-    }</h5><div class=" puntero">
-      <ion-icon name="${item.favorito ? "star-outline" : "star-sharp"}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>    
-        </div>
-        <p>${item.description}</p>
-        <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
-      </div>
-      </div>
-        `;
-
-        columna.innerHTML = tarjeta;
-        contenedorPopulares.appendChild(columna);
-    });
-    
-  }
-
-  listarAccion();
-
-
-
-
-
-
-
-
-  const inicializacion2 = () => {
-    const data = [
       {
-        id: 9,
+        id: 99,
         title: "Tabu",
         description:
           "Taboo está ambientada en 1814 y comienza con James Delaney (Tom Hardy) regresando a Inglaterra después de doce años en África con catorce diamantes robados.",
@@ -293,7 +144,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 10,
+        id: 102,
         title: "Narcos Mexico",
         description:
           "El narcotráfico en México es una actividad ilegal que consiste en el cultivo, fabricación, distribución y venta de sustancias ilícitas.",
@@ -303,7 +154,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 11,
+        id: 711,
         title:
           "Freud",
         description:
@@ -314,7 +165,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 12,
+        id: 812,
         title:
           "Scarface",
         description:
@@ -325,7 +176,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 13,
+        id: 123,
         title: "El Padrino",
         description:
           "El Padrino narra la historia de un hombre, Vito Corleone, el capo más respetado de Nueva York. Déspota benevolente, implacable con sus rivales, inteligente y fiel a los principios del honor y la amistad.",
@@ -335,7 +186,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 14,
+        id: 144,
         title:
           "Rescatando al soldado Ryan",
         description:
@@ -346,7 +197,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 15,
+        id: 185,
         title:
           "El Renacido",
         description:
@@ -357,7 +208,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 16,
+        id: 196,
         title:
           "El Hombre Gris",
         description:
@@ -368,7 +219,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 17,
+        id: 177,
         title:
           "La Isla Siniestra",
         description:
@@ -379,7 +230,7 @@ const listarProductos = () => {
         favorito: false,
       },
       {
-        id: 9,
+        id: 977,
         title: "El Patron del Mal",
         description:
           "El Patrón del mal es la producción más ambiciosa que se ha producido en Colombia. Basada en un completísimo documento periodístico y en los testimonios de personas que de alguna manera tuvieron que ver con este genio del mal.",
@@ -404,3 +255,50 @@ const listarProductos = () => {
       });
       localStorage.setItem("productos", JSON.stringify(productos));
     };
+
+    //-------------------------------------------------------------------------------
+
+    let contenedor = document.querySelector(".pelis");
+
+    //-------------------------------------------------------------------------------
+
+const listarProductos = () => {
+    //limpiar
+    contenedor.innerHTML = "";
+    //Recorrer
+    productos.forEach((item) => {
+      //Creamos los NODOS
+      let columna = document.createElement("div");
+      columna.classList = "peli";
+      //Creamos la tarjeta
+      let tarjeta = `
+      <div class="peli">
+      <div class="contenedor-img">
+      <img src="${item.image}" class="card-img-top img-tarjeta" alt="${
+        item.title
+      }">
+            </div>
+      <div class="hover">
+      <div class="titleFav">
+      <h5 class="card-title">
+      ${
+      item.title
+    }</h5>
+    <ion-icon name="${item.favorito ? 'star-sharp' : 'star-outline'}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>
+        <p>${item.description}</p>
+        <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
+      </div>
+      </div>
+      `;
+  
+      columna.innerHTML = tarjeta;
+      contenedor.appendChild(columna);
+    });
+  };
+  
+  if (productos == 0) {
+    inicializacion();
+  }
+  
+  listarProductos();
+  

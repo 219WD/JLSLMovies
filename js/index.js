@@ -1,3 +1,5 @@
+
+
 gsap.from(".logo", {duration: 1.5, opacity: 0, scale: 0.3, ease: "back"});
 gsap.from(".nav-menu-item", {duration: 1, opacity: 0, scale: 0.3, y: -150});
 gsap.from(".txt-header", {duration: 1.5, opacity: 0, scale: 0.3, ease: "back"});
@@ -12,6 +14,7 @@ const navMenu = document.querySelector(".nav-menu");
 toggle.addEventListener("click", () =>{
     navMenu.classList.toggle("nav-menu_visible");
 })
+
 
 const swiper = new Swiper(".swiper-hero", {
   // Optional parameters
@@ -34,4 +37,3 @@ const swiper = new Swiper(".swiper-hero", {
     prevEl: ".swiper-button-prev",
   },
 });
-

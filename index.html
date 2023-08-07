@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
+<!-- PLAN-B -->
 
 <body>
   <header>
@@ -20,9 +21,10 @@
         <li class="nav-menu-item"><a href="#" class="nav-menu-link">series</a></li>
         <li class="nav-menu-item"><a href="#" class="nav-menu-link">peliculas</a></li>
         <li class="nav-menu-item"><a href="#" class="nav-menu-link">About Us</a></li>
-        <li class="nav-menu-item"><a href="#" class="nav-menu-link">contact</a></li>
+        <li class="nav-menu-item"><a href="/pages/favoritos.html" class="nav-menu-link">contact</a></li>
         <li><button class="button nav" id="btn-login">Cerrar Sesión</button></li>
         <li><a href="/pages/administrador.html" class="button nav" id="administrar">Administrar</a></li>
+
 
       </ul>
     </nav>
@@ -42,6 +44,16 @@
     </div>
   </header>
 
+  <article class="modal-container">
+    <div class="modal">
+      <div class="modal-body">
+        <div class="wrapper active-popup">
+          <span class="icon-close"><ion-icon name="close"></ion-icon></span>
+        </div>
+      </div>
+    </div>
+  </article>
+
   <article class="miLista">
     <!-- Slider main container -->
     <div class="swiper swiper-hero">
@@ -54,53 +66,24 @@
           <div class="hover"></div>
         </div>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
       <!-- If we need navigation buttons -->
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
 
-      <!-- If we need scrollbar -->
-      <!-- <div class="swiper-scrollbar"></div> -->
     </div>
   </article>
 
-  <section class="populares">
-    <!-- Slider main container -->
-    <div class="swiper swiper-hero">
-      <h2>Populares</h2>
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper" id="populares-slider">
-        <!-- Slides -->
-        <div class="swiper-slide" id="favoritos">
-          
-          <div class="hover"></div>
-        </div>
-      </div>
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev popularesButton"></div>
-      <div class="swiper-button-next popularesButton"></div>
-    </div>
-  </section>
+  <div class="contenedor-pelis">
+    <div class="pelis">
+      <div class="peli">
+        <div class="hover">
+          <div class="titleFav">
 
-  <section class="accion">
-    <!-- Slider main container -->
-    <div class="swiper swiper-hero">
-      <h2>Accion</h2>
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper" id="accion-slider">
-        <!-- Slides -->
-        <div class="swiper-slide" id="favoritos">
-          
-          <div class="hover"></div>
+          </div>
         </div>
       </div>
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev popularesButton"></div>
-      <div class="swiper-button-next popularesButton"></div>
     </div>
-  </section>
+  </div>
 
   <footer class="piepagina">
     <div class="grupo1">
@@ -137,12 +120,12 @@
       <small>&copy; 2023 <b>JLSLMovies</b> - Todos los Derechos Reservados</small>
     </div>
   </footer>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="/js/pelis.js"></script>
-  <script src="/js/global.js"></script>
-  <script src="/js/favoritos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/pelis.js"></script>
+  <script src="/js/favoritos.js"></script>
+  <script src="/js/global.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="/js/index.js"></script>
