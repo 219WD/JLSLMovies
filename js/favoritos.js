@@ -70,4 +70,3 @@ listarProductosFavoritos();
     //Listar los productos
     listarProductosFavoritos();
   };
-  

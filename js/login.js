@@ -1,4 +1,8 @@
-
+const admin = {
+  email: "admin@admin.com",
+  password: "administrador",
+  cargo: true,
+};
 // Escuchar el evento submit del formulario de inicio de sesión
 document.getElementById('formLogIn').addEventListener('submit', function (e) {
   e.preventDefault();
@@ -17,5 +21,10 @@ document.getElementById('formLogIn').addEventListener('submit', function (e) {
   if (user) {
     alert('¡Inicio de sesión exitoso!');
     location.replace("/index.html")
+  }
+
+  if(correoAdmin === admin.email && passwordAdmin === admin.password){
+    alert('¡Inicio de sesión exitoso, Bienvenido Administrador!');
+    location.replace("/pages/indexAdmin.html")
   }
 });
