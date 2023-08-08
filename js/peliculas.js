@@ -21,12 +21,13 @@ const traeDatos = () => {
 
     <div>
     <img src="${producto.image}" class="" alt="${producto.title}">
-    <a href=""><button class="button header"><ion-icon name="play-sharp"></ion-icon>reproducir</button></a>
     
     </div>
     <div> <h5 class="titulo">${producto.title}</h5>
       <h3>Rating: ${producto.rating} </i><i class="fa-solid fa-star"><i class="fa-sharp fa-solid fa-star-half-stroke fa-beat"></i></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></h3>
     <p class="card-text">${producto.description}</p>
+    <a href=""><button class="button header"><ion-icon name="play-sharp"></ion-icon>reproducir</button></a>
+
     </div>
 
      
