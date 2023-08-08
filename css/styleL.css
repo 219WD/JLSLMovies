@@ -241,7 +241,6 @@ i{
      color: #ffffff;
      text-align: center;
      font-family: 'Playfair Display', serif;
-    
 }
 
 h4{
@@ -275,6 +274,7 @@ h4{
 }
 
 .headerError img{
+    width: 30vw;
     animation: pulse 3s infinite;
 }
     
