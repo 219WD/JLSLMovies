@@ -1,3 +1,5 @@
+
+
 gsap.from(".logo", {duration: 1.5, opacity: 0, scale: 0.3, ease: "back"});
 gsap.from(".nav-menu-item", {duration: 1, opacity: 0, scale: 0.3, y: -150});
 gsap.from(".txt-header", {duration: 1.5, opacity: 0, scale: 0.3, ease: "back"});
@@ -13,6 +15,7 @@ toggle.addEventListener("click", () =>{
     navMenu.classList.toggle("nav-menu_visible");
 })
 
+
 const swiper = new Swiper(".swiper-hero", {
   // Optional parameters
   slidesPerView: "auto",
@@ -21,32 +24,16 @@ const swiper = new Swiper(".swiper-hero", {
 
   direction: "horizontal",
   loop: true,
-  // allowTouchMove: true,
-  // effect: "cube",
+
   autoplay: {
-    delay: 10000,
+    delay: 5000,
     pauseOnMouseEnter: true,
     disableOnInteraction: false,
   },
-
-  // If we need pagination
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   // type: "progressbar"
-  //   clickable: true,
-  //   // dynamicBullets: true
-  // },
 
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: ".swiper-scrollbar",
-  //   draggable: true,
-  // },
 });
-

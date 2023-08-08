@@ -168,15 +168,29 @@ header {
 
 
 
-.nav-menu-item .button.nav {
+.button.nav {
+    font-size: 15px;
     display: flex;
     color: #000000;
     padding: 5px 30px;
     margin-top: 20px;
 }
-
+#administrar{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #ffffff;
+    margin-left: 5px;
+}
 .nav-menu-item .button.nav:hover {
     color: #ffffff;
+}
+.divadminprueba{
+    width: 50vw;
+    display: flex;
+    margin: auto;
+}
+.divadminprueba .veamo{
+    width: 50vw;
 }
 
 .header {
@@ -255,7 +269,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 3;
+    z-index: 5;
     display: flex;
     background-color: #111111bd;
     display: none;
@@ -520,7 +534,9 @@ header {
 .swiper-hero .swiper-pagination-bullet-active {
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
-
+.swiper-wrapper h3{
+    margin-top: 30px;
+}
 .swiper-slide .hover{
     width: 0%;
     height: 99%;
@@ -535,9 +551,8 @@ header {
     overflow: hidden;
     transition: .8s all;
 }
-
-.hover h5 a{
-    text-decoration: none;
+.hover .card-title{
+    text-align: center;
     color: #fff;
     font-size: 18px;
 }
@@ -548,14 +563,19 @@ header {
     padding: 10px;
     text-align: center;
 }
-.hover .puntero ion-icon{
+.hover .titleFav ion-icon{
     margin-left: 5px;
     font-size: 20px;
     color: #ffffff;
+    cursor: pointer;
 }
 .hover .button.peli{
     width: 100%;
     height: 40px;
+}
+.hover .button.peli{
+    background-color: #fff;
+    color: #000000;
 }
 
 .swiper-slide:hover .hover{
@@ -564,18 +584,74 @@ header {
 
 
 
-.populares {
+
+
+.contenedor-pelis{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 50px 0;
+}
+.pelis{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 5px;
+}
+.peli{
+    height: 192px;
+    width: 341px;
     position: relative;
+    
+}
+.peli img{
+    border-radius: 5px;
+}
+.peli .hover{
+    width: 0%;
+    height: 99%;
+    background-color: rgba(56, 53, 53, 0.568);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .8s all;
+}
+.hover .card-title{
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+.hover p{
+    color: #fff;
+    font-size: 13px;
+    transition: 1s all;
+    padding: 10px;
+    text-align: center;
+}
+.hover .titleFav ion-icon{
+    margin-left: 5px;
+    font-size: 20px;
+    color: #000000;
+}
+.hover .button.peli{
+    width: 100%;
+    height: 40px;
+}
+.hover .button.peli{
+    background-color: #fff;
+    color: #000000;
 }
 
-.populares h2 {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    z-index: 2;
-    color: #ffffff;
-    font-size: 20px;
+.peli:hover .hover{
+    width: 100%;
 }
+
+
 
 
 /* Footer */
@@ -804,6 +880,20 @@ header {
 
     .header .txt-header .buttons .button ion-icon{
         display: none;
+    }
+    .contenedor-pelis{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 50px 0;
+    }
+    .pelis{
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
     }
 }
 
