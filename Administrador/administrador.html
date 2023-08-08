@@ -71,7 +71,7 @@
       </div>
       <div class="row mb-5">
         <div class="col-12 col-md-8 offset-md-2 borde_form">
-          <form onsubmit="">
+          <form onsubmit="guardarProducto (event)">
             <div class="row mb-2">
               <div class="col">
                 <label>Nombre de Pelicula/Serie</label>
@@ -105,11 +105,9 @@
                   id="categoria"
                 >
                   <option selected>Seleccione una categoria</option>
-                  <option value="electronics">Mi Lista</option>
-                  <option value="Periféricos">Populares</option>
-                  <option value="Accesorios">Accion</option>
-                  <!-- <option value="Storage">Storage</option>
-                  <option value="Monitores">Monitores</option> -->
+                  <option value="Mi Lista">Mi Lista</option>
+                  <option value="Populares">Populares</option>
+                  <option value="Accion">Accion</option>
                 </select>
               </div>
               <div class="col">
@@ -168,7 +166,7 @@
     </main>
     <footer></footer>
 
-    
+
 
     <!-- Modal -->
      <div
@@ -224,9 +222,9 @@
                     id="categoriaModal"
                   >
                     <option selected>Seleccione una categoría</option>
-                    <option value="electronics">Mi Lista</option>
-                    <option value="Periféricos">Populares</option>
-                    <option value="Accesorios">Accion</option>
+                    <option value="Mi Lista">Mi Lista</option>
+                    <option value="Pelicula">Pelicula</option>
+                    <option value="Serie">Serie</option>
                   </select>
                 </div>
                 <div class="col">

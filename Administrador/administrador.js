@@ -56,6 +56,40 @@ class Producto {
         });
       };
 
+      const guardarProducto = (event) => {
+        event.preventDefault();
+
+    let id = productos.at(-1).id + 1;
+
+    let titulo = document.querySelector("#titulo").value;
+    let descripcion = document.querySelector("#descripcion").value;
+    let categoria = document.querySelector("#categoria").value;
+    let precio = document.querySelector("#precio").value;
+    let imagen = document.querySelector("#imagen").value;
+
+    let producto = new Producto(
+      id,
+      titulo,
+      descripcion,
+      categoria,
+      precio,
+      imagen
+    );
+
+    productos.push(producto);
+
+    localStorage.setItem("productos", JSON.stringify(productos));
+
+    document.querySelector("#titulo").value = "";
+    document.querySelector("#descripcion").value = "";
+    document.querySelector("#categoria").value = "";
+    document.querySelector("#precio").value = "";
+    ocument.querySelector("#imagen").value = "";
+
+    cargarTabla();
+
+     };
+
       const eliminarProducto = (id)=> {
         let nuevoArreglo = productos.filter((producto)=>{
           return producto.id !=id;
@@ -92,25 +126,28 @@ class Producto {
       document.querySelector("#imagenModal").value= productos[indexUpdate].image;
   
 
-
      myModal.show();
     };
 
     const actualizarProducto = (event) => {
         event.preventDefault();
 
+        productos[indexUpdate].title = document.querySelector("#tituloModal").value;
+        productos[indexUpdate].description = document.querySelector("#descripcionModal").value;
+        productos[indexUpdate].category = document.querySelector("#categoriaModal").value;
+        productos[indexUpdate].price = document.querySelector("#precioModal").value;
+        productos[indexUpdate].image = document.querySelector("#imagenModal").value;
+
+      
+        localStorage.setItem("productos", JSON.stringify(productos));
+
+        cargarTabla();
+      
+        myModal.hide();
 
 
-        
     };
     
-      
-  
-    
-
-
-
-
 
       cargarTabla();
 
