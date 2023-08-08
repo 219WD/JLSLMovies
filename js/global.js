@@ -8,7 +8,7 @@ const user = JSON.parse(localStorage.getItem('users')) || [];
 // Cambiar configuración del botón
 if (btnLogin) {
   if (user.length > 0) {
-    btnLogin.innerText = "Cerrar sesión";
+    btnLogin.innerText = "Sesión";
   } else {
     btnLogin.innerText = "Inicio de sesión";
   }
@@ -21,8 +21,8 @@ function sesion() {
 
   if (user.length > 0) {
     // Si está logueado, cerramos sesión
-    localStorage.removeItem("users");
-    location.replace("/index.html");
+    localStorage.removeItem("emailLog");
+    location.replace("/pages/premain.html");
   } else {
     // Si no está logueado, redirigimos al inicio de sesión
     location.replace("/pages/premain.html");

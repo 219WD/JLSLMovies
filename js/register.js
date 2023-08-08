@@ -3,6 +3,7 @@ class Usuario {
     this.username = username;
     this.password = password;
     this.email = email;
+    this.cargo = cargo;
   }
 }
 
@@ -23,7 +24,7 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
   }
 
   // Crear una instancia de Usuario con los datos del nuevo usuario
-  const newUser = new Usuario(newUsername, newPassword, newEmail);
+  const newUser = new Usuario(newUsername, newPassword, newEmail, cargo = false);
 
   // Agregar el nuevo usuario a la lista
   users.push(newUser);
