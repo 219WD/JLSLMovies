@@ -3,11 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Contacto</title>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <link rel="stylesheet" href="/css/contacto.css">
-    <title></title>
-  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('cm9Pok0LluxJiZb-X');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -19,7 +42,7 @@
 
         <div class="card-container">
           <div class="card">
-            <form id="contactForm">
+            <form id="contact-form">
               <label for="name">Nombre:</label>
               <input type="text" id="name" name="name" required>
               <div id="nameError" class="error-message"></div>
