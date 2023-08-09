@@ -96,6 +96,7 @@ header {
 .header {
     width: 90%;
     margin: auto;
+    margin-top: 20vw;
 }
 
 .txt-header {
@@ -140,7 +141,9 @@ i{
     margin: 10px;
 }
 
-
+.contenedor-cards{
+    margin-top: 30vh;
+}
 .cards{
     display: flex;
     justify-content:space-around;
@@ -671,14 +674,14 @@ h4{
                     }
 }
 
-/*FOOTER*/
-
+/* Footer */
 .piepagina{
     /* justify-content: space-between; */
     padding: 10px;
      width: 100%;
      background-color: #333333;
      position: absolute;
+     margin-top: 10vh;
      /* bottom: 0; */
  
  
