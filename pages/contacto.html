@@ -36,7 +36,7 @@
     <header>
         <!-- Aquí iría el código del navbar -->
         <nav class="navbar">
-            <div class="logo"><a href="#"><img src="/assets/logo-n.png" alt=""></a></div>
+            <div class="logo"><a href="#"><img src="/assets/logo-g.png" alt=""></a></div>
             <button class="toggle"><ion-icon name="menu"></ion-icon></button>
             <ul class="nav-menu" id="nav-menu">
               <li class="nav-menu-item"><a href="#" class="nav-menu-link">inicio</a></li>
@@ -52,7 +52,6 @@
       </header>
     
       <main>
-        <h1>Contacto</h1>
 
         <div class="card-container">
           <div class="card">
@@ -90,10 +89,52 @@
     </div>
     </main>
     
-      <footer>
-        <!-- Aquí iría el código del footer -->
+    <footer class="piepagina">
+        <div class="grupo1">
+          <div class="box">
+            <figure>
+              <a href="#"><img src="/assets/logo-n.png" alt=""></a>
+            </figure>
+          </div>
+          <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <div class="botones">
+              <ul>
+                <li><a href="/proyecto 1/page/principal.html">PAG PRINCIPAL</a></li>
+                <li><a href="/proyecto 1/page/formulario.html">CONTACTO COMERCIAL</a></li>
+              </ul>
+              <ul>
+                <li><a href="/proyecto 1/page/error404.html">ACERCA DE JLSLMovies</a></li>
+                <li><a href="/proyecto 1/page/error404.html">TERMINOS Y CONDICIONES</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+              <a href="https://www.facebook.com"><span class="fb"><ion-icon name="logo-facebook"></ion-icon></span></a>
+              <a href="https://www.instagram.com"><span class="in"><ion-icon name="logo-instagram"></ion-icon></span></a>
+              <a href="https://www.twitter.com"><span class="tw"><ion-icon name="logo-twitter"></ion-icon></span></a>
+              <a href="https://www.youtube.com"><span class="yt"><ion-icon name="logo-youtube"></ion-icon></span></a>
+              <a href="https://www.linkedin.com"><span class="li"><ion-icon name="logo-linkedin"></ion-icon></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="grupo2">
+          <small>&copy; 2023 <b>JLSLMovies</b> - Todos los Derechos Reservados</small>
+        </div>
       </footer>
-    
-</body>
+
+<script>
+const toggle = document.querySelector(".toggle");
+const navMenu = document.querySelector(".nav-menu");
+
+toggle.addEventListener("click", () =>{
+    navMenu.classList.toggle("nav-menu_visible");
+})
+</script>
 <script src="/js/contacto.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
+</body>
 </html>
