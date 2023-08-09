@@ -196,6 +196,9 @@ i{
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------*/
 .buttons .button.header{
+    margin-top: 0;
+}
+.buttons .button.header{
     text-decoration: none;
     position: relative;
     display: inline-block;
