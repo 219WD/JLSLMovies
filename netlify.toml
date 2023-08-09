@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/"
-  to = "./pages/premain.html"
-  status = 200
