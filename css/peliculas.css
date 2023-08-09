@@ -16,6 +16,7 @@ body{
     display: flex;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
+    z-index: 10;
 }
 
 .nav-menu-link {
@@ -88,6 +89,15 @@ body{
     overflow: hidden;
     margin: 0 auto; /* Centramos horizontalmente utilizando margen automático */
   }
+  .toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
   
   /* Asegurémonos de que la imagen dentro de la tarjeta se ajuste correctamente */
   .card img {
@@ -322,7 +332,7 @@ body{
         border-radius: 20px;
         backdrop-filter: blur(20px);
         box-shadow: 0 0 30px rgba(0, 0, 0, .5);
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 100px;
         width: 100%;
@@ -332,6 +342,7 @@ body{
         padding-bottom: 30px;
         left: 100%;
         transition: left 0.3s;
+        z-index: 1990;
     }
 
     .nav-menu-link:hover {
@@ -347,9 +358,8 @@ body{
 
     .nav-menu_visible {
         left: 0;
-        
-        z-index: 100;
     }
+
 
     .contenedor-card .card{
         height: auto;
