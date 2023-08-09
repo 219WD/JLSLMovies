@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <link rel="stylesheet" href="/css/contacto.css">
+    <title></title>
+  
+</head>
+<body>
+    <header>
+        <!-- Aquí iría el código del navbar -->
+      </header>
+    
+      <main>
+        <h1>Contacto</h1>
+
+        <div class="card-container">
+          <div class="card">
+            <form id="contactForm">
+              <label for="name">Nombre:</label>
+              <input type="text" id="name" name="name" required>
+              <div id="nameError" class="error-message"></div>
+          
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+              <div id="emailError" class="error-message"></div>
+          
+              <label for="message">Mensaje:</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+              <div id="messageError" class="error-message"></div>
+          
+              <button class="button header" onclick="capturarDatos()">Enviar Correo</button>
+          </form>
+          
+         
+            </div>
+        </div>
+       
+
+        <h2>Preguntas Frecuentes</h2>
+    <div class="faq">
+        <h3>¿Cómo puedo sugerir una película?</h3>
+        <p>Puedes enviarnos tus sugerencias de películas a través del formulario de contacto. Asegúrate de proporcionar detalles sobre el título y el motivo por el que crees que sería una buena adición.</p>
+        
+        <h3>¿Cómo reporto un problema de reproducción?</h3>
+        <p>Si estás experimentando problemas con la reproducción de películas, te recomendamos verificar tu conexión a Internet y tu dispositivo. Si el problema persiste, contáctanos a través del formulario de contacto y te ayudaremos a resolverlo.</p>
+        
+        <h3>¿Cuál es el tiempo de respuesta promedio?</h3>
+        <p>Nuestro equipo se esfuerza por responder a todos los mensajes en un plazo de 24 a 48 horas hábiles. Sin embargo, en momentos de alta demanda, esto podría tomar un poco más de tiempo. Agradecemos tu paciencia.</p>
+    </div>
+    </main>
+    
+      <footer>
+        <!-- Aquí iría el código del footer -->
+      </footer>
+    
+</body>
+<script src="/js/contacto.js"></script>
+</html>
