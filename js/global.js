@@ -22,9 +22,9 @@ function sesion() {
   if (user.length > 0) {
     // Si está logueado, cerramos sesión
     localStorage.removeItem("emailLog");
-    location.replace("/pages/premain.html");
+    location.replace("/index.html");
   } else {
     // Si no está logueado, redirigimos al inicio de sesión
-    location.replace("/pages/premain.html");
+    location.replace("/index.html");
   }
 }
