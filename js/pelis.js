@@ -286,7 +286,7 @@ const listarProductos = () => {
     }</h5>
     <ion-icon name="${item.favorito ? 'star-sharp' : 'star-outline'}" onclick="marcarFavorito(${item.id})" aria-hidden="true"></ion-icon>
         <p>${item.description}</p>
-        <a class="button peli" href="./pages/producto.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
+        <a class="button peli" href="./pages/peliculas.html?id=${item.id}"><ion-icon name="play-sharp"></ion-icon></a>
       </div>
       </div>
       `;
