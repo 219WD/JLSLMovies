@@ -192,14 +192,15 @@ i{
 /* ERROR 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------*/
-.button {
+.buttons .button.header{
+    text-decoration: none;
     position: relative;
     display: inline-block;
     font-size: 20px;
     text-transform: capitalize;
     text-align: center;
-    color: #000000;
-    border: 2px solid #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
     padding: 10px 60px;
     z-index: 1;
     cursor: pointer;
@@ -208,24 +209,24 @@ i{
     
 }
 
-.button:hover {
-    color: #ffffff;
+.button.header:hover {
+    color: #000000;
 }
 
-.button::before {
+.button.header::before {
     content: '';
     position: absolute;
     top: 0;
     left: -25px;
     width: 0;
     height: 100%;
-    background: #000000;
+    background: #ffffff;
     transform: skewX(-35deg);
     transition: 1s;
     z-index: -1;
 }
 
-.button:hover:before {
+.button.header:hover:before {
     width: 150%;
 }
 
