@@ -20,7 +20,7 @@ document.getElementById('formLogIn').addEventListener('submit', function (e) {
 
   if (user) {
     alert('¡Inicio de sesión exitoso!');
-    location.replace("/index.html")
+    location.replace("/pages/principal.html")
   }
 
   if(correoAdmin === admin.email && passwordAdmin === admin.password){
