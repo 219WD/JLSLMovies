@@ -275,7 +275,6 @@ class Producto {
           <th scope="row">${producto.title}</th>
           <td>${producto.description}</td>
           <td>${producto.category}</td>
-          <td>${producto.price}</td>
           <td>
           <div class="d-flex gap-2">
           <i class="fa fa-pencil puntero" onclick="abrirModal(${producto.id})" aria-hidden="true"></i>
