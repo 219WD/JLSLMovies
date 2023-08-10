@@ -1,7 +1,9 @@
 
 
 body{
-    background-image: url('/assets/fondolucas.jpg');
+    background-image: url('/assets/fondolucas.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .navbar {
