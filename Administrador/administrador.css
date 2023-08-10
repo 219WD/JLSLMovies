@@ -406,6 +406,9 @@ body{
        grid-template-columns: auto;
        gap: 5px;
    }
+   #table{
+      width: 80%;
+   }
 }
 
 

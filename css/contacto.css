@@ -1,4 +1,8 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body{
     background-image: url('https://img.freepik.com/premium-photo/black-wall-texture-rough-background-dark-concrete-floor-old-grunge-background-with-black_263512-1855.jpg?size=626&ext=jpg');
@@ -433,6 +437,17 @@ body{
 
   .nav-menu_visible {
       left: 0;
+  }
+  h2{
+    text-align: center;
+  }
+  .faq{
+    margin: auto;
+    width: 90%;
+    margin-bottom: 10vh;
+  }
+  .piepagina{
+    width: 100%;
   }
 }
 
